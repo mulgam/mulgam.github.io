@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-3  bottommargin" style="padding: 0 5px;"></div>
+
+    {% for member in site.data.team %}
+
+    <div class="col-3  bottommargin" style="padding: 0 5px;">
+      <div class="team">
+        <div class="team-image">
+          <img src="images/team/{{member.photo}}.jpg" alt="{{member.name}}">
+        </div>
+        <div class="team-desc">
+          <div class="team-title"><h4>{{member.name}}</h4><span>{{member.role}}</span></div>
+          <div class="team-content d-none d-md-block">{{member.comment}}</div>
+
+          <a href="https://instagram.com/{{member.instagram}}" class="social-icon inline-block si-small si-light si-rounded si-instagram">
+            <i class="icon-instagram"></i>
+            <i class="icon-instagram"></i>
+          </a>
+
+          {% if member.facebook%}
+          <a href="https://facebook.com/{{member.facebook}}" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+            <i class="icon-facebook"></i>
+            <i class="icon-facebook"></i>
+          </a>
+          {%endif%}
+
+
+          {% if member.youtube%}
+          <a href="https://www.youtube.com/channel/{{member.youtube}}" class="social-icon inline-block si-small si-light si-rounded si-youtube">
+            <i class="icon-youtube"></i>
+            <i class="icon-youtube"></i>
+          </a>
+          {%endif%}
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="col-3  bottommargin" style="padding: 0 5px;"></div>
+  </div>
+</div>
